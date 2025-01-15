@@ -142,15 +142,18 @@
     </div>
   </div>
   <!-/ Form Search End /-->
-<div class="py-3">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div><a href="mailto:info@darasa.app" class="nav-link" style="color: #652c8f;">info@wakala.africa</a>
-                    </div>
-                    <div><a href="tel:+254723583847" class="nav-link" style="color: #652c8f;">+254723583847</a></div>
-                </div>
-            </div>
+<div class="contact-info-top py-3">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <a href="mailto:info@wakala.africa" class="nav-link" style="color: #652c8f;">info@wakala.africa</a>
         </div>
+        <div>
+          <a href="tel:+254723583847" class="nav-link" style="color: #652c8f;">+254723583847</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--/ Nav Star /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
@@ -1046,6 +1049,19 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+   <script>
+    window.addEventListener('scroll', function() {
+  const contactInfo = document.querySelector('.contact-info-top');
+  const navbar = document.querySelector('.navbar-default');
+  
+  if (window.scrollY > contactInfo.offsetHeight) {
+    navbar.style.top = '0';
+  } else {
+    navbar.style.top = contactInfo.offsetHeight + 'px';
+  }
+});
+  </script>
 
 </body>
 </html>
