@@ -26,6 +26,29 @@ body {
   position: fixed;
 }
 
+/* Sticky Navigation Styles */
+.sticky-nav {
+  position: fixed; /* Make the navbar fixed */
+  top: 0; /* Stick to the top */
+  width: 100%; /* Ensure full width */
+  z-index: 1000; /* Make sure it's above other elements*/
+  /* Add any other styling you need, like a background color for example */
+ background-color: white; /* example background color*/
+}
+
+/* Sticky Contact Row Styles */
+.sticky-contact-row {
+  position: fixed; /* Make the contact row fixed */
+  top: 98px; /* Adjust this value to be directly below the nav, it depends on the height of your nav */
+  width: 100%; /* Ensure full width */
+  z-index: 999; /* Place below navbar if you need to, but you probably dont*/
+   background-color: #f8f9fa;
+   padding: 10px 0;
+   text-align: center;
+  /* Add any other styling you need, like a background color for example */
+ 
+}
+
 body {
 }
 
