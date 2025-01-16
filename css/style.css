@@ -14,6 +14,98 @@ body {
   color: #555555;
 }
 
+
+/* Style for sold properties grid */
+.sold-properties-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between items */
+  margin-top: 20px;
+   justify-content: center;
+}
+
+.sold-property-item {
+   background-color: #f9f9f9; /* light background to make items stand out*/
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the start*/
+    flex: 0 0 calc(33% - 20px); /* three column with spacing */
+}
+
+.sold-property-img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.sold-property-item h3 {
+  color: #007bff; /* Use a color that matches the brand */
+  margin-bottom: 5px;
+}
+.sold-property-item .location{
+  font-style: italic;
+   color: #6c757d;
+}
+
+.sold-property-item p {
+  color: #555; /* Readability purposes */
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+.sold-property-item {
+      flex: 0 0 calc(50% - 20px);
+  }
+}
+@media (max-width: 576px) {
+  .sold-property-item {
+      flex: 0 0 calc(100% - 20px);
+  }
+}
+
+/* Styles for the service steps */
+.services-container {
+  display: flex;
+  flex-direction: column; /* stack the items vertically */
+  gap: 20px; /* Adds space between the items */
+   margin-top: 20px;
+}
+.service-item {
+   background-color: #f9f9f9; /* light background to make items stand out*/
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the start*/
+  gap: 10px;
+}
+
+.service-item h3 {
+  color: #007bff; /* Use a color that matches the brand */
+  margin-bottom: 5px;
+}
+
+.service-item p {
+  color: #555; /* Readability purposes */
+  font-size: 15px;
+  line-height: 1.6;
+}
+/* Add media query for larger screen sizes */
+@media (min-width: 768px){
+    .services-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .service-item{
+         flex: 0 0 calc(50% - 20px); /* two columns with spacing*/
+    }
+}
+
 .contact-info-top {
   background: #f7f8f6;
   position: relative;
