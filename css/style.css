@@ -15,14 +15,15 @@ body {
 }
 
 .contact-info-top {
-  background: #fff;
+  background: #f7f8f6;
   position: relative;
   z-index: 1030;
 }
 
 .navbar-default {
   transition: top 0.3s ease-in-out;
-  top: 40px; /* Initial position below contact info */
+  top: 0; /* Initial position below contact info */
+  position: fixed;
 }
 
 body {
