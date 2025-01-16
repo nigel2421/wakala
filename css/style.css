@@ -48,6 +48,112 @@ body {
   /* Add any other styling you need, like a background color for example */
  
 }
+/* Styles for the process steps */
+.process-container {
+  display: flex;
+  flex-direction: column; /* stack the items vertically */
+  gap: 20px; /* Adds space between the items */
+   margin-top: 20px;
+}
+.process-item {
+   background-color: #f9f9f9; /* light background to make items stand out*/
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the start*/
+  gap: 10px;
+}
+
+.process-item h3 {
+  color: #007bff; /* Use a color that matches the brand */
+  margin-bottom: 5px;
+}
+
+.process-item p {
+  color: #555; /* Readability purposes */
+  font-size: 15px;
+  line-height: 1.6;
+}
+/* Add media query for larger screen sizes */
+@media (min-width: 768px){
+    .process-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .process-item{
+         flex: 0 0 calc(50% - 20px); /* two columns with spacing*/
+    }
+}
+
+.post-content ul {
+  padding-left: 20px; /* Adjust spacing to your liking */
+   margin-top: 10px;
+}
+
+ .post-content ul li{
+   line-height: 1.6;
+   margin-bottom: 5px;
+ }
+
+
+ .who-we-are {
+  padding: 20px; /* Add some spacing around the content */
+  text-align: center; /* Center the text */
+}
+.who-we-are h2 {
+  color: #333; /* Dark color for the heading */
+  margin-bottom: 15px;
+}
+.who-we-are p {
+  color: #555; /* Darker grey for the paragraph */
+  line-height: 1.6; /* Improve readability with line spacing */
+}
+
+/* Styles for the Vision and Mission section */
+.vision-mission-container {
+  display: flex;
+  flex-direction: column; /* stack the items vertically */
+  gap: 20px; /* Adds space between the items */
+   margin-top: 20px;
+}
+.vision-item,
+.mission-item{
+   background-color: #f9f9f9; /* light background to make items stand out*/
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the start*/
+  gap: 10px;
+}
+
+.vision-item h3,
+.mission-item h3 {
+  color: #007bff; /* Use a color that matches the brand */
+  margin-bottom: 5px;
+}
+
+.vision-item p,
+.mission-item p {
+  color: #555; /* Readability purposes */
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Add media query for larger screen sizes */
+@media (min-width: 768px){
+  .vision-mission-container{
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  .vision-item,
+  .mission-item{
+        flex: 0 0 calc(50% - 20px); /* two columns with spacing*/
+  }
+}
 
 body {
 }
