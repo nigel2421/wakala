@@ -9,6 +9,7 @@
 
   <!-- Favicons -->
   <link href="img/logo/logo.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -36,7 +37,7 @@
  </script>
  <!-- End Google tag (gtag.js) -->
 
- 
+ <script src="https://analytics.ahrefs.com/analytics.js" data-key="+49W7K1qrBgnX0cheB3Jbw" async></script>
 
   <!-- =======================================================
     Theme Name: EstateAgency
@@ -48,24 +49,103 @@
 
 <body>
 
-
-  
-<div class="contact-info-top py-120">
-  <div class="container-fluid fixed-top">
-    <div class="container-fixed">
-      <div class="d-flex justify-content-between align-items-center">
-        <div>
-          <a href="mailto:info@wakala.africa" class="nav-link" style="color: #652c8f;">info@wakala.co.ke</a>
+   <!--/ Form Search Star /--
+ <div class="click-closed"></div>
+  <div class="box-collapse">
+    <div class="title-box-d">
+      <h3 class="title-d">Search Property</h3>
+    </div>
+    <span class="close-box-collapse right-boxed ion-ios-close"></span>
+    <div class="box-collapse-wrap form">
+      <form class="form-a">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="Type">Keyword</label>
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="Type">Type</label>
+              <select class="form-control form-control-lg form-control-a" id="Type">
+                <option>All Type</option>
+                <option>For Rent</option>
+                <option>For Sale</option>
+                <option>Open House</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="city">City</label>
+              <select class="form-control form-control-lg form-control-a" id="city">
+                <option>All City</option>
+                <option>Alabama</option>
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Colorado</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bedrooms">Bedrooms</label>
+              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="garages">Garages</label>
+              <select class="form-control form-control-lg form-control-a" id="garages">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bathrooms">Bathrooms</label>
+              <select class="form-control form-control-lg form-control-a" id="bathrooms">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="price">Min Price</label>
+              <select class="form-control form-control-lg form-control-a" id="price">
+                <option>Unlimite</option>
+                <option>$50,000</option>
+                <option>$100,000</option>
+                <option>$150,000</option>
+                <option>$200,000</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Search Property</button>
+          </div>
         </div>
-        <div>
-          <a href="tel:+254742789755" class="nav-link" style="color: #652c8f;">+254 742 789 755</a>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
+  <!-/ Form Search End /-->
+
   <!--/ Nav Star /-->
-  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top sticky-nav">
-    <div class="container-fluid">
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -73,7 +153,7 @@
         <span></span>
       </button>
       <a class="navbar-brand" href="index.html">
-        <img src="img/nobgrdlogo.png" alt="Wakala Real Estate Logo" style="height: 80px;"></a>
+    <img src="img/nobgrdlogo.png" alt="Wakala Real Estate Logo" style="height: 50px;"></a>
 
       <!--<a class="navbar-brand text-brand" href="index.html">Wakala<span class="color-b">Real Eastate</span></a>-->
       <!--<button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
@@ -88,37 +168,12 @@
          <!--  <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>-->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              About Us
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="birika.html">Who We Are</a>
-              <a class="dropdown-item" href="montana.html">What We Do</a>
-              <a class="dropdown-item" href="agents-grid.html">Land Buying Process</a>
-              <a class="dropdown-item" href="agent-single.html">Agent Single</a>
-            </div>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="property-grid.html">Property</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Properties
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="birika.html">Birika Gardens</a>
-              <a class="dropdown-item" href="montana.html">Montana Gardens</a>
-              <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
-              <a class="dropdown-item" href="agent-single.html">Agent Single</a>
-            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="blog-grid.html">Blog</a>
           </li>
-
           <!--<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -134,7 +189,6 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-
         </ul>
       </div>
      <!--  <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
@@ -143,17 +197,6 @@
       </button>-->
     </div>
   </nav>
-
-  <!-- Contact Info Row -->
-  <div class="contact-info-row sticky-contact-row">
-    <div class="container-fluid">
-      <p>
-         <i class="fas fa-phone"></i> <a href="tel:+254720000000">+254720000000</a> |
-        <i class="fas fa-envelope"></i> <a href="mailto:info@wakala.com">info@wakala.com</a>
-         | <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
-      </p>
-    </div>
-  </div>
   <!--/ Nav End /-->
 
   <!--/ Carousel Star /-->
@@ -170,7 +213,7 @@
                     <p class="intro-title-top">Birika Town, Kajiado County</p>
                     <h1 class="intro-title mb-4">
                       <span class="color-b">Birika </span> Gardens
-                      <br>50x100 Plots</h1>
+                      <br>50 X 100 Plots</h1>
                     <p class="intro-subtitle intro-price">
                       <a href="birika.html"><span class="price-a">Price | Ksh 950K</span></a>
                     </p>
@@ -192,7 +235,7 @@
                     <p class="intro-title-top">Katani road, off Mombasa road5</p>
                     <h1 class="intro-title mb-4">
                       <span class="color-b">Katani </span> Gardens
-                      <br> 50x100 Plots</h1>
+                      <br> 50X100 Plots</h1>
                     <p class="intro-subtitle intro-price">
                       <a href="#"><span class="price-a">Price | Ksh 3.6 M</span></a>
                     </p>
@@ -211,10 +254,10 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Thigio, Kikuyu</p>
+                   <p class="intro-title-top">Thigio, Kikuyu</p>
                     <h1 class="intro-title mb-4">
                       <span class="color-b">Montana </span> Gardens
-                      <br> 50x100 Plots</h1>
+                      <br> 50 X 100 Plots</h1>
                     <p class="intro-subtitle intro-price">
                       <a href="#"><span class="price-a">Price | Ksh 1.85 M</span></a>
                     </p>
@@ -302,7 +345,7 @@
               </p>
             </div>
             <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Learn More
+              <a href="https://anyduka.com/" class="link-c link-icon">Visit Anyduka
                 <span class="ion-ios-arrow-forward"></span>
               </a>
             </div>
@@ -437,7 +480,205 @@
   </section>
   <!--/ Property End /-->
 
-  
+  <!--/ Agents Star /-->
+  <!--<section class="section-agents section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">Best Agents</h2>
+            </div>
+            <div class="title-link">
+              <a href="agents-grid.html">All Agents
+                <span class="ion-ios-arrow-forward"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-box-d">
+            <div class="card-img-d">
+              <img src="img/agent-4.jpg" alt="" class="img-d img-fluid">
+            </div>
+            <div class="card-overlay card-overlay-hover">
+              <div class="card-header-d">
+                <div class="card-title-d align-self-center">
+                  <h3 class="title-d">
+                    <a href="agent-single.html" class="link-two">Margaret Sotillo
+                      <br> Escala</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="card-body-d">
+                <p class="content-d color-text-a">
+                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                </p>
+                <div class="info-agents color-a">
+                  <p>
+                    <strong>Phone: </strong> +54 356 945234</p>
+                  <p>
+                    <strong>Email: </strong> agents@example.com</p>
+                </div>
+              </div>
+              <div class="card-footer-d">
+                <div class="socials-footer d-flex justify-content-center">
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-d">
+            <div class="card-img-d">
+              <img src="img/agent-1.jpg" alt="" class="img-d img-fluid">
+            </div>
+            <div class="card-overlay card-overlay-hover">
+              <div class="card-header-d">
+                <div class="card-title-d align-self-center">
+                  <h3 class="title-d">
+                    <a href="agent-single.html" class="link-two">Stiven Spilver
+                      <br> Darw</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="card-body-d">
+                <p class="content-d color-text-a">
+                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                </p>
+                <div class="info-agents color-a">
+                  <p>
+                    <strong>Phone: </strong> +54 356 945234</p>
+                  <p>
+                    <strong>Email: </strong> agents@example.com</p>
+                </div>
+              </div>
+              <div class="card-footer-d">
+                <div class="socials-footer d-flex justify-content-center">
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-d">
+            <div class="card-img-d">
+              <img src="img/agent-5.jpg" alt="" class="img-d img-fluid">
+            </div>
+            <div class="card-overlay card-overlay-hover">
+              <div class="card-header-d">
+                <div class="card-title-d align-self-center">
+                  <h3 class="title-d">
+                    <a href="agent-single.html" class="link-two">Emma Toledo
+                      <br> Cascada</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="card-body-d">
+                <p class="content-d color-text-a">
+                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                </p>
+                <div class="info-agents color-a">
+                  <p>
+                    <strong>Phone: </strong> +54 356 945234</p>
+                  <p>
+                    <strong>Email: </strong> agents@example.com</p>
+                </div>
+              </div>
+              <div class="card-footer-d">
+                <div class="socials-footer d-flex justify-content-center">
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="link-one">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <!--/ Agents End /-->
 
   <!--/ News Star /-->
   <section class="section-news section-t8">
@@ -461,7 +702,7 @@
           <div class="card-box-b card-shadow news-box">
             <div class="img-box-b">
               <img src="img/blog/out/blog10.svg" alt="" class="img-b img-fluid">
-            </div> 
+            </div>
             <div class="card-overlay">
               <div class="card-header-b">
                 
@@ -631,7 +872,7 @@
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
                 Wakala Real Eastate is the leading Kenyan real-estate development & Investment Company.
-                We are committed to providing exceptional service and value to our clients.
+                
               </p>
             </div>
             <div class="w-footer-a">
@@ -639,7 +880,7 @@
                 <li class="color-a">
                   <span class="color-text-a">Email .</span> info@wakala.africa</li>
                 <li class="color-a">
-                    <span class="color-text-a"><strong>WhatsApp:</strong></span>
+                    <strong>WhatsApp:</strong>
                    <a href="https://wa.me/254742789755" class="color-text-a">+254 742 789755</a>
               </ul>
             </div>
@@ -686,7 +927,7 @@
                 <li class="color-a">
                   <span class="color-text-a">Email .</span> info@wakala.africa</li>
                 <li class="color-a">
-                    <span class="color-text-a"><strong>WhatsApp:</strong></span>
+                    <strong>WhatsApp:</strong>
                    <a href="https://wa.me/254742789755" class="color-text-a">+254 742 789755</a>
               </ul>
             </div>
@@ -734,7 +975,7 @@
               <li class="list-inline-item">
                 <a href="https://www.instagram.com/wakala_real_estate/">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a> 
+                </a>
               </li>
               <!--<li class="list-inline-item">
                 <a href="#">
@@ -785,19 +1026,6 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
-   <script>
-   window.addEventListener('scroll', function() {
-   const contactInfo = document.querySelector('.contact-info-top');
-   const navbar = document.querySelector('.navbar-default');
- 
-   if (window.scrollY > contactInfo.offsetHeight) {
-     navbar.style.top = '0';
-   } else {
-     navbar.style.top = contactInfo.offsetHeight + 'px';
-   }
-   });
-  </script>
 
 </body>
 </html>
