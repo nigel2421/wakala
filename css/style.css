@@ -15,6 +15,78 @@ body {
 }
 
 
+
+/* Optional CSS for layout tweaks*/
+.testimonial-video-container {
+    margin-bottom: 20px; /* Add space below the video */
+}
+.testimonial-carousel-container{
+      margin-top: 20px; /* Add space above the testimonials */
+  }
+ /* Make the testimonials fit without the images*/
+  .testimonials-box .row > div {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally align items */
+    text-align: center;
+}
+.testimonials-box .testimonial-ico {
+  margin: 15px 0;
+}
+
+
+
+/* Desktop styles (already in your existing styles probably, keeping here for reference) */
+.carousel-item-a {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* Mobile styles */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .carousel-item-a {
+        background-image: none; /* Remove the desktop background image set initially */
+    }
+
+   .carousel-item-a[data-mobile-bg] {
+      background-image: var(--mobile-bg); /* Use the CSS variable */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  .carousel-item-a[data-mobile-bg]::before {
+     content: '';
+      display: block;
+       width: 100%;
+     height: 100%;
+      position: absolute;
+        top: 0;
+       left: 0;
+      z-index: -1;
+      background-image: var(--mobile-bg);
+         background-size: cover;
+        background-repeat: no-repeat;
+         background-position: center center;
+  }
+}
+
+/* JavaScript to set the CSS variables*/
+ <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const carouselItems = document.querySelectorAll('.carousel-item-a');
+           carouselItems.forEach(item => {
+            const mobileBg = item.getAttribute('data-mobile-bg');
+              if (mobileBg) {
+                  item.style.setProperty('--mobile-bg', `url(${mobileBg})`);
+
+              }
+           });
+       });
+  </script>
+
+
 /* Style for sold properties grid */
 .sold-properties-grid {
   display: flex;

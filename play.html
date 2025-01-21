@@ -136,10 +136,13 @@
   </nav>
   <!--/ Nav End /-->
 
-  <!--/ Carousel Star /-->
-  <div class="intro intro-carousel">
+ <!--/ Carousel Star /-->
+<div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/test1.jpg)">
+      <div class="carousel-item-a intro-item bg-image"
+           style="background-image: url(img/test1.jpg)"
+           data-mobile-bg="img/test1_mobile.jpg"
+           data-desktop-bg="img/test1.jpg">
         <!--<div class="overlay overlay-a"></div>-->
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -160,7 +163,10 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/usekatani.png)">
+      <div class="carousel-item-a intro-item bg-image"
+           style="background-image: url(img/usekatani.png)"
+           data-mobile-bg="img/usekatani_mobile.png"
+           data-desktop-bg="img/usekatani.png">
         <!--<div class="overlay overlay-a"></div>-->
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -182,7 +188,10 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/usemontana.png)">
+      <div class="carousel-item-a intro-item bg-image"
+           style="background-image: url(img/usemontana.png)"
+           data-mobile-bg="img/usemontana_mobile.png"
+            data-desktop-bg="img/usemontana.png">
         <!--<div class="overlay overlay-a"></div>-->
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -526,7 +535,6 @@
   </section>
   <!--/ News End /-->
 
-  <!--/ Testimonials Star -->
  <!--/ Testimonials Star /-->
 <section class="section-testimonials section-t8 nav-arrow-a">
   <div class="container">
@@ -578,72 +586,6 @@
                 </div>
             </div>
           </div>
-           <div class="carousel-item-a">
-            <div class="testimonials-box">
-              <div class="row">
-                  <div class="col-sm-12 col-md-12">
-                    <div class="testimonial-ico">
-                      <span class="ion-ios-quote"></span>
-                    </div>
-                    <div class="testimonials-content">
-                      <p class="testimonial-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                        debitis hic ber quibusdam
-                        voluptatibus officia expedita corpori.
-                      </p>
-                    </div>
-                    <div class="testimonial-author-box">
-                      <img src="img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                      <h5 class="testimonial-author">Pablo & Emma</h5>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-           <div class="carousel-item-a">
-            <div class="testimonials-box">
-              <div class="row">
-                  <div class="col-sm-12 col-md-12">
-                    <div class="testimonial-ico">
-                      <span class="ion-ios-quote"></span>
-                    </div>
-                    <div class="testimonials-content">
-                      <p class="testimonial-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                        debitis hic ber quibusdam
-                        voluptatibus officia expedita corpori.
-                      </p>
-                    </div>
-                    <div class="testimonial-author-box">
-                      <img src="img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                      <h5 class="testimonial-author">Pablo & Emma</h5>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-           <div class="carousel-item-a">
-            <div class="testimonials-box">
-              <div class="row">
-                  <div class="col-sm-12 col-md-12">
-                    <div class="testimonial-ico">
-                      <span class="ion-ios-quote"></span>
-                    </div>
-                    <div class="testimonials-content">
-                      <p class="testimonial-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                        debitis hic ber quibusdam
-                        voluptatibus officia expedita corpori.
-                      </p>
-                    </div>
-                    <div class="testimonial-author-box">
-                      <img src="img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                      <h5 class="testimonial-author">Pablo & Emma</h5>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
           <div class="carousel-item-a">
             <div class="testimonials-box">
               <div class="row">
@@ -672,7 +614,6 @@
   </div>
 </section>
 <!--/ Testimonials End /-->
-  <!--/ Testimonials End /-->
 
   <!--/ footer Star /-->
   <section class="section-footer">
@@ -826,6 +767,20 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
+
+  * JavaScript to set the CSS variables*/
+ <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const carouselItems = document.querySelectorAll('.carousel-item-a');
+           carouselItems.forEach(item => {
+            const mobileBg = item.getAttribute('data-mobile-bg');
+              if (mobileBg) {
+                  item.style.setProperty('--mobile-bg', `url(${mobileBg})`);
+
+              }
+           });
+       });
+  </script>
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
