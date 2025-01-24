@@ -14,11 +14,18 @@ body {
   color: #555555;
 }
 
-
+/* Styles for the thin row between nav and intro with spacing */
+.thin-row {
+  height: 90px; /* Set the height to 5 pixels */
+  background-color: #032221; /* Optional: Add a background color, adjust as needed */
+  width: 100%; /* Make it span the full width */
+  margin-top: 10px; /* Adds 10px spacing above the row */
+  margin-bottom: 20px; /* Adds 10px spacing below the row */
+}
 
 /* Optional CSS for layout tweaks*/
 .testimonial-video-container {
-    margin-bottom: 20px; /* Add space below the video */
+    margin-bottom: 40px; /* Add space below the video */
 }
 .testimonial-carousel-container{
       margin-top: 20px; /* Add space above the testimonials */
@@ -195,7 +202,7 @@ body {
   position: fixed; /* Make the navbar fixed */
   top: 0; /* Stick to the top */
   width: 100%; /* Ensure full width */
-  z-index: 1000; /* Make sure it's above other elements*/
+  z-index: 10000; /* Make sure it's above other elements*/
   /* Add any other styling you need, like a background color for example */
  background-color: white; /* example background color*/
 }
