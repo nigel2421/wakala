@@ -579,6 +579,9 @@ a:hover {
   font-size: 1.2rem;
   font-weight: 300;
   padding-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
 .title-link a {
@@ -1431,6 +1434,17 @@ a:hover {
 
 .gallery-property {
   margin-bottom: 3rem;
+  max-height: 500px;
+}
+
+.carousel-item-b{
+  height: 100%;
+}
+.carousel-item-b img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
 }
 
 .property-price {
@@ -1619,13 +1633,28 @@ a:hover {
 }
 
 .card-box-ico {
-  padding: 1rem 3rem 1rem 2.5rem;
-  border: 5px solid #033500;
+  padding: 1rem;
+  border: 3px solid #033500;
+  border-radius: 3px;
 }
 
 .card-box-ico span {
   font-size: 4rem;
   color: #000000;
+}
+
+.special-offer-tag{
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    right: -22px;
+    top: -40px;
+    color: #000;
+    font-size: 32px;
+    transform: rotateX(30deg);
+    background-image: url('/img/bg.webp');
+    padding: 10px;
 }
 
 .title-c {
@@ -1966,6 +1995,114 @@ footer .credits {
 .btn.btn-b-n:hover {
   background-color: #26a356;
   color: #ffffff;
+}
+
+.new-location-advertisment{
+  width: 100%;
+  background-color: #FFF;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.green-background{
+  background-color: #0b3626;
+  color: #FFF;
+  position: relative;
+}
+
+.skew-element{
+  position: absolute;
+  left: -24px;
+  top: 5px;
+  width: 50px;
+  height: 97%;
+  background-color: #0b3626;
+  transform: rotateZ(10deg);
+  z-index: 10;
+}
+
+.advertisment-photo{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.overlay-element{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to left, #0b3626, #0b36264a, #ffffff0c);
+}
+
+.advertisment-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.opening-image-container{
+  width: 100%;
+  height: 500px;
+  background-image: url('../img/eden_phase_4/eden_ridge_IV.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: darken;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-property-banner{
+  min-height: 400px;
+  background-image: url('../img/eden_phase_4/eden_ridge_IV.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.property-img{
+  width: 100%;
+  height: 100%;
+}
+
+.divider{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6));
+}
+
+.property-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-info{
+  width: 100%;
+  min-height: 100%;
+}
+
+.property-link{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.price-box{
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 @media (min-width: 576px) {
