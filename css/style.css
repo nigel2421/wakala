@@ -8,6 +8,9 @@
 /*======================================
 //--//-->   STYLES GENERALES
 ======================================*/
+@view-transition{
+  navigation: auto;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
