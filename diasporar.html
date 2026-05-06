@@ -70,7 +70,7 @@
     
                                 <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white text-medium shadow-lg outline-1 outline-black/5 rounded-md">
                                     <div class="py-1">
-                                        <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase IV</a>
+                                        <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
                                         <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
                                         <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
                                         <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
@@ -106,7 +106,7 @@
 
                     <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white shadow-lg outline-1 outline-black/5 rounded-md">
                         <div class="py-1">
-                            <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase IV</a>
+                            <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
                             <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
                             <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
@@ -288,7 +288,7 @@
 <section class="max-w-lvw py-5 mx-5 my-20">
    <h1 class="text-black text-bold text-center text-4xl">Want to know more?</h1>
 
-   <form>
+    <form id="lead_capture">
         <div class="space-y-12">
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 lg:grid-cols-2">
                 <div class="col-span-.5">
@@ -311,7 +311,7 @@
                     <label for="email" class="block text-sm/6 font-medium text-black">Email Address</label>
                     <div class="mt-2">
                         <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="email" id="email" name="email" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
+                            <input type="email" id="email" name="emailAddress" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
                         </div>
                     </div>
                 </div>
@@ -332,8 +332,10 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-end w-full py-3 border-b-1 border-gray-800/50">
-                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600">
+            <input type="text" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
+
+            <div class="flex items-center justify-end w-full py-3 border-t-1 border-gray-800/50">
+                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600" type="submit">
                     Send Inquiry
                 </button>
             </div>
@@ -370,7 +372,7 @@
             <div class="text-start">
                 <h2 class="font-bold mb-5">PROPERTIES</h2>
                 <ul class="text-medium space-y-2 list-none">
-                    <li><a href="/properties/eden_iv_kajiado.html">Eden Ridge Phase IV</a></li>
+                    <li><a href="/properties/eden_iv_kajiado.html">Eden Ridge Phase 4</a></li>
                     <li><a href="/properties/tuala_kajiado.html">Tuala</a></li>
                     <li><a href="/properties/kitengela_kajiado.html">Kitengela Manor</a></li>
                     <li><a href="/properties/birika_kajiado.html">Birika Gardens</a></li>
@@ -420,6 +422,82 @@
             }
         });
     })
+
+    const webToLeadFormElement = document.getElementById("lead_capture");
+    let isSubmitting = false;
+
+    webToLeadFormElement.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (isSubmitting) return;
+
+        const formData = new FormData(webToLeadFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        const emptyFields = Object.entries(data).filter(([_, v]) => !v.trim());
+        if (emptyFields.length > 0 && !data.website == "") {
+            showError("Please fill in all fields before submitting.");
+            return;
+        }
+
+        isSubmitting = true;
+        setButtonState("loading");
+        submitLead(data);
+    });
+
+    const submitLead = async (data) => {
+        const url = "https://crm.wakala.africa/espocrm/api/v1/LeadCapture/d9869b70aed851f1ff231fa3d70480ea";
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                setButtonState("success");
+                webToLeadFormElement.reset();
+            } else {
+                showError("Something went wrong. Please try again.");
+                setButtonState("idle");
+            }
+        } catch (error) {
+            console.error("Capture failed:", error);
+            showError("Network error. Please check your connection.");
+            setButtonState("idle");
+        } finally {
+            isSubmitting = false; // 🔓 always unlock
+        }
+    };
+
+
+    function setButtonState(state) {
+        const btn = webToLeadFormElement.querySelector("[type='submit']");
+        const states = {
+            idle:    { text: "Send Inquiry", disabled: false },
+            loading: { text: "Sending...",   disabled: true  },
+            success: { text: "Sent ✓",       disabled: true  },
+        };
+        const s = states[state];
+        btn.textContent = s.text;
+        btn.disabled = s.disabled;
+        btn.style.opacity = s.disabled ? "0.6" : "1";
+    }
+
+    function showError(msg) {
+        let el = document.getElementById("form-error");
+        if (!el) {
+            el = document.createElement("p");
+            el.id = "form-error";
+            el.style.cssText = "color:red; margin-top:8px; font-size:14px;";
+            webToLeadFormElement.appendChild(el);
+        }
+        el.textContent = msg;
+        setTimeout(() => el.textContent = "", 4000);
+    }
 </script>
 </body>
 </html>

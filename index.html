@@ -71,7 +71,7 @@
     
                                 <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white text-medium shadow-lg outline-1 outline-black/5 rounded-md">
                                     <div class="py-1">
-                                        <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase IV</a>
+                                        <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
                                         <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
                                         <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
                                         <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
@@ -107,7 +107,7 @@
 
                     <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white shadow-lg outline-1 outline-black/5 rounded-md">
                         <div class="py-1">
-                            <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase IV</a>
+                            <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
                             <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
                             <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
@@ -115,9 +115,9 @@
                         </div>
                     </el-menu>
                 </el-dropdown>
-                <a href="revamped_diaspora.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">Diaspora</a>
+                <a href="/diasporar.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">Diaspora</a>
                 <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5 hidden" style="color: #FFF;">Blog</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">About Us</a>
+                <a href="/wakala_identity.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">About Us</a>
                 <div class="p-2 rounded shadow-sm" style="background-color: #FFF;">
                     <a href="https://wa.me/254742789755" class="block font-bold text-black text-center">
                         +254 742 789755
@@ -134,7 +134,7 @@
     <div class="relative isolate px-6 pt-10 lg:px-10">
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-52">
             <div class="text-center">
-                <h1 class="text-5xl font-bold tracking-tight text-balance sm:text-7xl" style="color: #FFF;">Introducing Eden Ridge Phase IV</h1>
+                <h1 class="text-5xl font-bold tracking-tight text-balance sm:text-7xl" style="color: #FFF;">Introducing Eden Ridge Phase 4</h1>
                 <p class="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">Experience the serene and tranquil nature Kiserian has to offer.</p>
                 <p class="font-medium tetx-pretty text-white">From as Low as 1.69M</p>
                 <div class="my-10 flex items-center justify-center gap-x-2 py-2 rounded-lg active:outline outline-green-800" onclick="window.location.href='/properties/eden_iv_kajiado.html'">
@@ -195,7 +195,7 @@
    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-3 my-6">
         <div class="relative property-container col-span-1 w-full min-h-100 border-1 border-gray-100 rounded-md bg-top bg-no-repeat bg-cover flex justify-center" style="background-image: url('/img/eden_phase_4/eden_IV_drone.webp');">
             <div class="absolute property-container-info bottom-0 inset-x-0 bg-white color-black rounded w-auto min-h-30 p-3 m-3 transition ease hover:bg-white/75 focus:bg-white/75" onclick="window.location.href='/properties/eden_iv_kajiado.html'">
-                <h2 class="text-black text-2xl font-medium">Eden Ridge IV</h2>
+                <h2 class="text-black text-2xl font-medium">Eden Ridge 4</h2>
                 <span class="flex flex-row items-center">
                     <img src="lib/remixicon/icons/Map/map-pin-2-line.svg" alt="Location Pin" class="w-3 h-3 mr-1">
                     <p class="text-black text-sm">Kiserian, Kajiado County</p>
@@ -413,7 +413,7 @@
 <section class="max-w-lvw py-5 mx-5 my-20">
    <h1 class="text-black text-bold text-center text-4xl">Want to know more?</h1>
 
-   <form>
+   <form id="lead_capture">
         <div class="space-y-12">
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 lg:grid-cols-2">
                 <div class="col-span-.5">
@@ -436,7 +436,7 @@
                     <label for="email" class="block text-sm/6 font-medium text-black">Email Address</label>
                     <div class="mt-2">
                         <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="email" id="email" name="email" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
+                            <input type="email" id="email" name="emailAddress" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
                         </div>
                     </div>
                 </div>
@@ -457,8 +457,10 @@
                 </div>
             </div>
 
+            <input type="text" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
+
             <div class="flex items-center justify-end w-full py-3 border-t-1 border-gray-800/50">
-                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600">
+                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600" type="submit">
                     Send Inquiry
                 </button>
             </div>
@@ -495,7 +497,7 @@
             <div class="text-start">
                 <h2 class="font-bold mb-5">PROPERTIES</h2>
                 <ul class="text-medium space-y-2 list-none">
-                    <li><a href="/properties/eden_iv_kajiado.html">Eden Ridge Phase IV</a></li>
+                    <li><a href="/properties/eden_iv_kajiado.html">Eden Ridge Phase 4</a></li>
                     <li><a href="/properties/tuala_kajiado.html">Tuala</a></li>
                     <li><a href="/properties/kitengela_kajiado.html">Kitengela Manor</a></li>
                     <li><a href="/properties/birika_kajiado.html">Birika Gardens</a></li>
@@ -544,7 +546,83 @@
                 }
             }
         });
-    })
+    });
+
+    const webToLeadFormElement = document.getElementById("lead_capture");
+    let isSubmitting = false;
+
+    webToLeadFormElement.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (isSubmitting) return;
+
+        const formData = new FormData(webToLeadFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        const emptyFields = Object.entries(data).filter(([_, v]) => !v.trim());
+        if (emptyFields.length > 0 && !data.website == "") {
+            showError("Please fill in all fields before submitting.");
+            return;
+        }
+
+        isSubmitting = true;
+        setButtonState("loading");
+        submitLead(data);
+    });
+
+    const submitLead = async (data) => {
+        const url = "https://crm.wakala.africa/espocrm/api/v1/LeadCapture/d9869b70aed851f1ff231fa3d70480ea";
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                setButtonState("success");
+                webToLeadFormElement.reset();
+            } else {
+                showError("Something went wrong. Please try again.");
+                setButtonState("idle");
+            }
+        } catch (error) {
+            console.error("Capture failed:", error);
+            showError("Network error. Please check your connection.");
+            setButtonState("idle");
+        } finally {
+            isSubmitting = false; // 🔓 always unlock
+        }
+    };
+
+
+    function setButtonState(state) {
+        const btn = webToLeadFormElement.querySelector("[type='submit']");
+        const states = {
+            idle:    { text: "Send Inquiry", disabled: false },
+            loading: { text: "Sending...",   disabled: true  },
+            success: { text: "Sent ✓",       disabled: true  },
+        };
+        const s = states[state];
+        btn.textContent = s.text;
+        btn.disabled = s.disabled;
+        btn.style.opacity = s.disabled ? "0.6" : "1";
+    }
+
+    function showError(msg) {
+        let el = document.getElementById("form-error");
+        if (!el) {
+            el = document.createElement("p");
+            el.id = "form-error";
+            el.style.cssText = "color:red; margin-top:8px; font-size:14px;";
+            webToLeadFormElement.appendChild(el);
+        }
+        el.textContent = msg;
+        setTimeout(() => el.textContent = "", 4000);
+    }
 </script>
 </body>
 </html>

@@ -9,8 +9,8 @@
     <link rel="canonical" href="https://wakala.africa">
 
     <!-- Favicons -->
-    <link href="img/logo/logo.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="/img/logo/logo.png" rel="icon">
+    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="/css/style.css" rel="stylesheet">
 
     <!--Links-->
@@ -34,8 +34,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
 
     <!--REMEMBER TO DISABLE CDN BEFORE PUSHING TO PRODUCTION. USE TAILWIND CLI -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <link rel="stylesheet" href="../output.css">
+
 
     <script src="/lib/jquery/jquery.min.js"></script>
     <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
@@ -66,31 +68,31 @@
     
                 <div class="flex flex-1 items-center justify-between sm:items-center sm:justify-between">
                     
-                    <div class="flex shrink-0 items-center" onclick="window.location.href='/index.html'">
+                    <div class="flex shrink-0 items-center" onclick="window.location.href='../index.html'">
                         <img src="../img/nobgrdlogo.png" alt="Wakala Logo" class="h-10 w-auto"/>
                     </div>
     
                     <div class="hidden sm:flex flex items-center justify-center flex-row">
                         <div class="flex align-center space-x-8 mr-4">
-                            <a href="index.html" class="rounded-md px-3 py-2 text-medium font-medium text-white hover:bg-gray-400/50">Home</a>
+                            <a href="/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-400/50">Home</a>
                             <el-dropdown class="inline-block">
-                                <button class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5" style="color: #000;">
+                                <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5" style="color: #000;">
                                     <span>Properties</span>
                                 </button>
     
-                                <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white text-medium shadow-lg outline-1 outline-black/5 rounded-md">
+                                <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white shadow-lg outline-1 outline-black/5 rounded-md">
                                     <div class="py-1">
-                                        <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase IV</a>
+                                        <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
                                         <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
-                                        <a href="#" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
-                                        <a href="#" class="block px-4 py-2 text-gray-700">Thika Komu</a>
+                                        <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
+                                        <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
                                         <a href="/properties/birika_kajiado.html" class="block px-4 py-2 text-gray-700">Birika</a>
                                     </div>
                                 </el-menu>
                             </el-dropdown>
-                            <a href="revamped_diaspora.html" class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5">Diaspora</a>
-                            <a href="#" class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5">Blog</a>
-                            <a href="#" class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5">About Us</a>
+                            <a href="/diasporar.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">Diaspora</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5 hidden">Blog</a>
+                            <a href="/wakala_identity.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">About Us</a>
                         </div>
     
                         <div class="p-2 rounded shadow-sm" style="background-color: #033600ee;">
@@ -105,7 +107,7 @@
                 </div>
             </div>
         </div>
-        
+
         <el-disclosure id="mobile-menu" hidden class="block sm:hidden rounded-b-2 m-0">
             <div class="space-y-1 px-2 pt-2 pb-3" style="background-color: #033600; color: #FFF;">
                 <a href="/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-400/50" style="color: #FFF;">Home</a>
@@ -116,15 +118,17 @@
 
                     <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white shadow-lg outline-1 outline-black/5 rounded-md">
                         <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-gray-700">Eden Ridge Phase IV</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700">Kambani</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700">Nakuru</a>
+                            <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
+                            <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
+                            <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
+                            <a href="/properties/birika_kajiado.html" class="block px-4 py-2 text-gray-700">Birika</a>
                         </div>
                     </el-menu>
                 </el-dropdown>
-                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">Diaspora</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">Blog</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">About Us</a>
+                <a href="revamped_diaspora.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">Diaspora</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5 hidden" style="color: #FFF;">Blog</a>
+                <a href="/wakala_identity.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">About Us</a>
                 <div class="p-2 rounded shadow-sm" style="background-color: #FFF;">
                     <a href="https://wa.me/254742789755" class="block font-bold text-black text-center">
                         +254 742 789755
@@ -143,7 +147,7 @@
     <div class="w-full max-h-lvh">
         <div class="h-screen w-full bg-no-repeat bg-cover bg-top flex items-center justify-center flex-col" style="background-image: url('/img/eden_phase_4/eden_IV_drone.webp');">
             <span class="w-full h-full flex items-center justify-center flex-col backdrop-brightness-50">
-                <h2 class="text-white text-4xl" style="color: #FFF;">Eden Ridge Phase IV</h2>
+                <h2 class="text-white text-4xl" style="color: #FFF;">Eden Ridge Phase 4</h2>
                 <span class="flex flex-row items-center">
                     <img src="/lib/remixicon/icons/Map/map-pin-2-line.svg" alt="Location Pin" class="w-3 h-3 mr-1 invert">
                     <p class="text-white text-sm">Kiserian, Kajiado County</p>
@@ -166,10 +170,13 @@
             <div class="w-full h-full overflow-hidden">
                 <img src="/img/eden_phase_4/eden_ridge_IV.jpeg" alt="Eden Ridge IV" class="w-full h-full object-cover">
             </div>
+            <div class="w-full h-full overflow-hidden">
+                <img src="/img/eden_phase_4/eden-iv-updated-gate.jpeg" alt="Eden Ridge IV" class="w-full h-full object-contain">
+            </div>
         </div>
         <div class="col-span-1 w-full p-10 mt-10">
             <div class="heading">
-                <h1 class="text-center text-3xl font-bold">Eden Ridge Phase IV</h1>
+                <h1 class="text-center text-3xl font-bold">Eden Ridge Phase 4</h1>
                 <div class="flex text-2xl mt-5 pe-6 items-center">
                     <span class="flex flex-col text-black me-10">
                         <p>Cash Price</p>
@@ -234,22 +241,22 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-4 mx-5 my-4 gap-5">
         <div class="col-span-1 lg:col-span-2">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(img/eden_phase_4/eden_ridge_IV_fence.jpeg)">
+            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(/img/eden_phase_4/eden_ridge_IV_fence.jpeg)">
                 <span class="text-white text-3xl">Fence</span>
             </div>
         </div>
         <div class="col-span-1 lg:col-span-2">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(img/eden_phase_4/eden_ridge_IV_marker.jpeg)">
+            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(/img/eden_phase_4/eden_ridge_IV_marker.jpeg)">
                 <span class="text-white text-3xl">Beacons</span>
             </div>
         </div>
         <div class="col-span-1 lg:col-span-2">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(img/eden_phase_4/eden_ridge_IV_title.webp)">
+            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(/img/eden_phase_4/eden_ridge_IV_title.webp)">
                 <span class="text-white text-3xl">Ready Titles</span>
             </div>
         </div>
         <div class="col-span-1 lg:col-span-2">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(img/eden_phase_4/eden_ridge_iv_gate.png)">
+            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(/img/eden_phase_4/eden_ridge_iv_gate.png)">
                 <span class="text-white text-3xl">Gate</span>
             </div>
         </div>
@@ -286,14 +293,14 @@
 <section class="max-w-lvw py-5 mx-5 my-20">
    <h1 class="text-black font-bold text-center text-4xl">Ready to see this plot?</h1>
 
-   <form>
+    <form id="lead_capture">
         <div class="space-y-12">
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-1 lg:grid-cols-2">
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 lg:grid-cols-2">
                 <div class="col-span-.5">
                     <label for="firstName" class="block text-sm/6 font-medium text-black">First Name</label>
                     <div class="mt-2">
                         <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="text" id="firstName" name="firstName" class="block min-w-0 grow bg-white p-2 outline-1 outline-black rounded">
+                            <input type="text" id="firstName" name="firstName" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
                         </div>
                     </div>
                 </div>
@@ -301,7 +308,7 @@
                     <label for="lastName" class="block text-sm/6 font-medium text-black">Last Name</label>
                     <div class="mt-2">
                         <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="text" id="lastName" name="lastName" class="block min-w-0 grow bg-white p-2 outline-1 outline-black rounded">
+                            <input type="text" id="lastName" name="lastName" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
                         </div>
                     </div>
                 </div>
@@ -309,7 +316,7 @@
                     <label for="email" class="block text-sm/6 font-medium text-black">Email Address</label>
                     <div class="mt-2">
                         <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="email" id="email" name="email" class="block min-w-0 grow bg-white p-2 outline-1 outline-black rounded">
+                            <input type="email" id="email" name="emailAddress" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
                         </div>
                     </div>
                 </div>
@@ -317,15 +324,7 @@
                     <label for="phoneNumber" class="block text-sm/6 font-medium text-black">Phone Number</label>
                     <div class="mt-2">
                         <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="text" id="phoneNumber" name="phoneNumber" class="block min-w-0 grow bg-white p-2 outline-1 outline-black rounded">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span- 5">
-                    <label for="siteVisitDate" class="block text-sm/6 font-medium text-black">Site Visit Date</label>
-                    <div class="mt-2">
-                        <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="date" name="siteVisitDate" id="siteVisitDate" class="block min-w-0 grow bg-white p-2 outline-1 outline-black rounded">
+                            <input type="text" id="phoneNumber" name="phoneNumber" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
                         </div>
                     </div>
                 </div>
@@ -333,14 +332,16 @@
                 <div class="col-span-1 lg:col-span-2">
                     <label for="inquiry" class="block text-sm font-medium text-black">Inquiry</label>
                     <div class="mt-2">
-                        <textarea name="inquiry" id="inquiry" rows="10" class="block w-full rounded px-3 py-1 5 text-base text-black outline-1 outline-black bg-white"></textarea>
+                        <textarea name="inquiry" id="inquiry" rows="10" class="block w-full rounded px-3 py-1 5 text-base text-black outline-1 outline-black"></textarea>
                     </div>
                 </div>
             </div>
 
-            <div class="flex items-center justify-end w-full py-2 border-b-1 border-gray-800/50">
-                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600">
-                    Send Site visit Inquiry
+            <input type="text" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
+
+            <div class="flex items-center justify-end w-full py-3 border-t-1 border-gray-800/50">
+                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600" type="submit">
+                    Send Inquiry
                 </button>
             </div>
         </div>
@@ -377,21 +378,22 @@
             <div class="text-start">
                 <h2 class="font-bold mb-5">PROPERTIES</h2>
                 <ul class="text-medium space-y-2 list-none">
-                    <li><a href="#">Eden Ridge Phase IV</a></li>
-                    <li><a href="#">Eden Ridge Phase II</a></li>
-                    <li><a href="#">Birika Gardens</a></li>
+                    <li><a href="/properties/eden_iv_kajiado.html">Eden Ridge Phase 4</a></li>
+                    <li><a href="/properties/tuala_kajiado.html">Tuala</a></li>
+                    <li><a href="/properties/kitengela_kajiado.html">Kitengela Manor</a></li>
+                    <li><a href="/properties/birika_kajiado.html">Birika Gardens</a></li>
                 </ul>
             </div>
             <div class="text-start">
                 <h2 class="font-bold mb-5">WAKALA</h2>
                 <ul class="text-medium space-y-2 list-none">
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Land Buying Process</a></li>
+                    <li><a href="/property-grids.html">Properties</a></li>
+                    <li><a href="/wakala_identity.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/process.html">Land Buying Process</a></li>
                 </ul>
             </div>
-            <div class="text-start">
+            <div class="text-start hidden">
                 <h2 class="font-bold mb-5">LEGAL</h2>
                 <ul class="text-medium space-y-2 list-none">
                     <li><a href="#">Privacy Policy</a></li>
@@ -417,9 +419,85 @@
         });
     });
 
-    const date = document.getElementById("siteVisitDate");
-    date.min = new Date().toISOString().split("T")[0];
+    // const date = document.getElementById("siteVisitDate");
+    // date.min = new Date().toISOString().split("T")[0];
 
+    
+    const webToLeadFormElement = document.getElementById("lead_capture");
+    let isSubmitting = false;
+
+    webToLeadFormElement.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (isSubmitting) return;
+
+        const formData = new FormData(webToLeadFormElement);
+        const data = Object.fromEntries(formData.entries());
+
+        const emptyFields = Object.entries(data).filter(([_, v]) => !v.trim());
+        if (emptyFields.length > 0 && !data.website == "") {
+            showError("Please fill in all fields before submitting.");
+            return;
+        }
+
+        isSubmitting = true;
+        setButtonState("loading");
+        submitLead(data);
+    });
+
+    const submitLead = async (data) => {
+        const url = "https://crm.wakala.africa/espocrm/api/v1/LeadCapture/d9869b70aed851f1ff231fa3d70480ea";
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                setButtonState("success");
+                webToLeadFormElement.reset();
+            } else {
+                showError("Something went wrong. Please try again.");
+                setButtonState("idle");
+            }
+        } catch (error) {
+            console.error("Capture failed:", error);
+            showError("Network error. Please check your connection.");
+            setButtonState("idle");
+        } finally {
+            isSubmitting = false; // 🔓 always unlock
+        }
+    };
+
+
+    function setButtonState(state) {
+        const btn = webToLeadFormElement.querySelector("[type='submit']");
+        const states = {
+            idle:    { text: "Send Inquiry", disabled: false },
+            loading: { text: "Sending...",   disabled: true  },
+            success: { text: "Sent ✓",       disabled: true  },
+        };
+        const s = states[state];
+        btn.textContent = s.text;
+        btn.disabled = s.disabled;
+        btn.style.opacity = s.disabled ? "0.6" : "1";
+    }
+
+    function showError(msg) {
+        let el = document.getElementById("form-error");
+        if (!el) {
+            el = document.createElement("p");
+            el.id = "form-error";
+            el.style.cssText = "color:red; margin-top:8px; font-size:14px;";
+            webToLeadFormElement.appendChild(el);
+        }
+        el.textContent = msg;
+        setTimeout(() => el.textContent = "", 4000);
+    }
 </script>
 </body>
 </html>
