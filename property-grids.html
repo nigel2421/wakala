@@ -36,6 +36,8 @@
     <!--REMEMBER TO DISABLE CDN BEFORE PUSHING TO PRODUCTION. USE TAILWIND CLI -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <link rel="stylesheet" href="/output.css">
+
 
     <script src="/lib/jquery/jquery.min.js"></script>
     <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
@@ -61,23 +63,25 @@
     
                     <div class="hidden sm:flex flex items-center justify-center flex-row">
                         <div class="flex align-center space-x-8 mr-4">
-                            <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-400/50">Home</a>
+                            <a href="index.html" class="rounded-md px-3 py-2 text-medium font-medium text-white hover:bg-gray-400/50">Home</a>
                             <el-dropdown class="inline-block">
-                                <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5" style="color: #000;">
+                                <button class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5" style="color: #000;">
                                     <span>Properties</span>
                                 </button>
     
-                                <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white shadow-lg outline-1 outline-black/5 rounded-md">
+                                <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white text-medium shadow-lg outline-1 outline-black/5 rounded-md">
                                     <div class="py-1">
-                                        <a href="#" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
-                                        <a href="#" class="block px-4 py-2 text-gray-700">Kambani</a>
-                                        <a href="#" class="block px-4 py-2 text-gray-700">Nakuru</a>
+                                        <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
+                                        <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
+                                        <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
+                                        <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
+                                        <a href="/properties/birika_kajiado.html" class="block px-4 py-2 text-gray-700">Birika</a>
                                     </div>
                                 </el-menu>
                             </el-dropdown>
-                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">Diaspora</a>
-                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">Blog</a>
-                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">About Us</a>
+                            <a href="/diasporar.html" class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5">Diaspora</a>
+                            <a href="/blogs-grids.html" class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5">Blogs</a>
+                            <a href="/wakala_identity.html" class="rounded-md px-3 py-2 text-medium text-gray-600 hover:bg-black/5">About Us</a>
                         </div>
     
                         <div class="p-2 rounded shadow-sm" style="background-color: #033600ee;">
@@ -93,29 +97,54 @@
             </div>
         </div>
 
-          <el-disclosure id="mobile-menu" hidden class="block sm:hidden rounded-b-2">
-            <div class="space-y-1 px-2 pt-2 pb-3">
-                <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-400/50">Home</a>
+        <el-disclosure id="mobile-menu" hidden class="block sm:hidden rounded-b-2 m-0">
+            <div class="space-y-1 px-2 pt-2 pb-3" style="background-color: #033600; color: #FFF;">
+                <a href="index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-400/50" style="color: #FFF;">Home</a>
                 <el-dropdown class="block">
-                    <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5" style="color: #000;">
+                    <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5" style="color: #FFF;">
                         <span>Properties</span>
                     </button>
 
                     <el-menu anchor="bottom end" popover class="w-50 origin-top-right bg-white shadow-lg outline-1 outline-black/5 rounded-md">
                         <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700">Kambani</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700">Nakuru</a>
+                            <a href="/properties/eden_iv_kajiado.html" class="block px-4 py-2 text-gray-700">Eden Ridge Phase 4</a>
+                            <a href="/properties/tuala_kajiado.html" class="block px-4 py-2 text-gray-700">Tuala</a>
+                            <a href="/properties/kitengela_kajiado.html" class="block px-4 py-2 text-gray-700">Kitengela Manor</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hidden">Thika Komu</a>
+                            <a href="/properties/birika_kajiado.html" class="block px-4 py-2 text-gray-700">Birika</a>
                         </div>
                     </el-menu>
                 </el-dropdown>
-                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">Diaspora</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">Blog</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-black/5">About Us</a>
+                <a href="/diasporar.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">Diaspora</a>
+                <a href="/blogs-grids.html" class="block rounded-md px-3 py-2 text-medium text-white hover:bg-black/5"  style="color: #FFF;">Blogs</a>
+                <a href="/wakala_identity.html" class="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-black/5" style="color: #FFF;">About Us</a>
+                <div class="p-2 rounded shadow-sm" style="background-color: #FFF;">
+                    <a href="https://wa.me/254742789755" class="block font-bold text-black text-center">
+                        +254 742 789755
+                    </a> 
+                    <a href="mailto:info@wakala.africa" class="block text-black text-center">
+                        info@wakala.africa
+                    </a>
+                </div>
             </div>
         </el-disclosure>
     </nav>
+
+    <!-- Hero informational section -->
+    <div class="relative isolate px-6 pt-10 lg:px-10">
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-52">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold tracking-tight text-balance sm:text-7xl" style="color: #FFF;">Introducing Eden Ridge Phase 4</h1>
+                <p class="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">Experience the serene and tranquil nature Kiserian has to offer.</p>
+                <p class="font-medium tetx-pretty text-white">From as Low as 1.69M Cash</p>
+                <div class="my-10 flex items-center justify-center gap-x-2 py-2 rounded-lg active:outline outline-green-800" onclick="window.location.href='/properties/eden_iv_kajiado.html'">
+                    <a href="#" class="text-sm font-semibold lg:text-xl" style="color: #FFF;">Learn more <span aria-hidden="true" style="color: #FFF;">→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 
 <!--Properties Sections-->
 <section class="my-20 max-w-lvw py-5">

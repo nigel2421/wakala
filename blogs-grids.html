@@ -9,9 +9,9 @@
     <link rel="canonical" href="https://wakala.africa">
 
     <!-- Favicons -->
-    <link href="/img/logo/logo.png" rel="icon">
-    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="img/logo/logo.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="css/style.css" rel="stylesheet">
 
     <!--Links-->
     <link rel="stylesheet" href="/lib/owlcarousel/assets/owl.carousel.min.css">
@@ -34,8 +34,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
 
     <!--REMEMBER TO DISABLE CDN BEFORE PUSHING TO PRODUCTION. USE TAILWIND CLI -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <link rel="stylesheet" href="output.css">
 
     <script src="/lib/jquery/jquery.min.js"></script>
     <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
@@ -43,17 +44,6 @@
     <title>Wakala Real Estate | Premium Lands in Kiserian For Sale</title>
 </head>
 <body>
-    <style>
-        .owl-carousel,
-        .owl-stage-outer,
-        .owl-stage,
-        .owl-item{
-            height: 100%;
-        }
-        body{
-            transition: background-color 1s ease-in-out;
-        }
-    </style>
 <section class="relative overflow-hidden w-full max-h-lvh bg-top bg-no-repeat bg-cover">
     <nav class="fixed top-0 w-full bg-white py-2 dark:bg-white z-50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -140,155 +130,63 @@
     </nav>
 </section>
 
-<!--Property Image Carousel-->
-<section class="my-30 pb-10">
-    <div class="w-full max-h-lvh">
-        <div class="h-screen w-full bg-no-repeat bg-cover bg-top flex items-center justify-center flex-col" style="background-image: url('/img/Tuala/tuala.webp');">
-            <span class="w-full h-full flex items-center justify-center flex-col backdrop-brightness-50">
-                <h2 class="text-white text-4xl" style="color: #FFF;">Tuala</h2>
-                <span class="flex flex-row items-center">
-                    <img src="/lib/remixicon/icons/Map/map-pin-2-line.svg" alt="Location Pin" class="w-3 h-3 mr-1 invert">
-                    <p class="text-white text-sm">Kajiado County</p>
-                </span>
-            </span>
-        </div>
-    </div>
-</section>
+<!--Blogs Sections-->
+<section class="my-20 max-w-lvw py-20">
+   <h1 class="text-black text-center text-4xl">Blogs</h1>
 
-<!--Property Details Section-->
-<section class="my-20 py-5"  id="heroDiv">
-    <div class="grid grid-cols-1 lg:grid-cols-2">
-        <div class="col-span-1 min-w-full h-70 owl-carousel p-3 rounded overflow-hidden">
-            <div class="w-full h-full">
-                <img src="/img/Tuala/tuala.webp" alt="Eden Ridge IV" class="w-full h-full object-cover">
+   <div class="grid grid-cols-1 lg:grid-cols-3 mx-5 my-6 gap-10">
+        <div class="col-span-1 w-full min-h-[500px] p-3 rounded hover:bg-gray-200/50 focus:bg-gray-200/50" onclick="window.location.href='/blogs/blog11.html'">
+            <div class="w-full h-3/4 rounded-md overflow-hidden">
+                <img src="/img/Katani/1.png" alt="Blog 10" class="w-full h-full object-fit">
             </div>
-            <div class="w-full h-full">
-                <img src="/img/Tuala/tuala_2.webp" alt="Eden Ridge IV" class="w-full h-full object-cover">
-            </div>
-            <div class="w-full h-full overflow-hidden">
-                <img src="/img/Tuala/tuala_3.webp" alt="Eden Ridge IV" class="w-full h-full object-cover">
+            <div class="grow mt-5">
+                <h1 class="text-black text-3xl font-semibold">
+                    Do your Research before purchasing Land
+                </h1>
+                <p>Posted on 7th May 26</p>
             </div>
         </div>
-        <div class="col-span-1 w-full p-10 mt-10">
-            <div class="heading">
-                <h1 class="text-start text-3xl font-bold">Tuala</h1>
-                <div class="flex text-2xl mt-5 pe-6 items-center">
-                    <span class="flex flex-col text-black me-10">
-                        <p>Cash Price</p>
-                        <p class="font-bold">1.2M</p>
-                    </span>
-                    <span class="flex items-start justify-center">
-                        <img src="/lib/remixicon/icons/Health & Medical/heart-line.svg" alt="Like Property" class="h-8 w-8">
-                        <p class="text-black font-light">Like</p>
-                    </span>
-                </div>
+        <div class="col-span-1 w-full min-h-[500px] p-3 rounded hover:bg-gray-200/50 focus:bg-gray-200/50" onclick="window.location.href='/blogs/blog10.html'">
+            <div class="w-full h-3/4 rounded-md overflow-hidden">
+                <img src="/img/blog/out/blog10.svg" alt="Blog 10" class="w-full h-full object-fit">
             </div>
-            <div class="body-text mt-4">
-                <p class="text-black">
-                    Imagine waking up to breathtaking views of the Ngong Hills, surrounded by tranquility and fresh air.
-                    Eden Ridge phase 4 offers you this idyllic escape just 30km from Nairobi and 7km from Kiserian town. This 3-acre haven provides the perfect balance between peaceful living and convenient access to amenities.
-                </p>
+            <div class="grow mt-5">
+                <h1 class="text-black text-3xl font-semibold">
+                    Verify Land Titles and Avoid Scams
+                </h1>
+                <p>Posted on 28th Apr 26</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!--Project Plan-->
-<section class="my-10 hidden">
-    <h1 class="text-center text-4xl font-bold">Project Plan</h1>
-    <div class="w-auto h-[500px] mx-10 my-1">
-        <img src="/img/eden_phase_4/Eden Ridge IV Plan.jpg" alt="Eden IV plan" class="w-full h-full object-contain">
-    </div>
-</section>
-
-<!--Project Ammenities-->
-<section class="my-10">
-    <h1 class="text-center text-4xl font-bold">Key Amenities</h1>
-
-    <div class="grid grid-cols-1 lg:grid-cols-4 mx-5 my-4 gap-5">
-        <div class="col-span-1">
-            <div class="w-full h-[100px] rounded p-5 flex items-center justify-center" style="background-color: #033600;">
-                <span class="text-white text-2xl">Schools</span>
+        <div class="col-span-1 w-full min-h-[500px] p-3 rounded transition duration-550 ease-out hover:bg-gray-200/50 focus:bg-gray-200/50" onclick="window.location.href='/blogs/blog9.html'">
+            <div class="w-full h-3/4 rounded-md overflow-hidden">
+                <img src="/img/blog/out/blog9.svg" alt="Blog 10" class="w-full h-full object-fit">
+            </div>
+            <div class="grow mt-5">
+                <h1 class="text-black text-3xl font-semibold">
+                    Understanding Land Rates in Kenya
+                </h1>
+                <p>Posted on 7th Mar 26</p>
             </div>
         </div>
-        <div class="col-span-1">
-            <div class="w-full h-[100px] rounded p-5 flex items-center justify-center" style="background-color: #033600;">
-                <span class="text-white text-2xl">Hospital</span>
+        <div class="col-span-1 w-full min-h-[500px] p-3 rounded transition duration-250 ease-out hover:bg-gray-200/50 focus:bg-gray-200/50" onclick="window.location.href='/blogs/blog8.html'">
+            <div class="w-full h-3/4 rounded-md overflow-hidden">
+                <img src="/img/blog/out/blog8.svg" alt="Blog 10" class="w-full h-full object-fit">
+            </div>
+            <div class="grow mt-5">
+                <h1 class="text-black text-3xl font-semibold">
+                    What to look for when purchasing land in Kenya
+                </h1>
+                <p>Posted on 11th Jan 26</p>
             </div>
         </div>
-        <div class="col-span-1">
-            <div class="w-full h-[100px] rounded p-5 flex items-center justify-center" style="background-color: #033600;">
-                <span class="text-white text-2xl">Recreation centres</span>
-            </div>
-        </div>
-        <div class="col-span-1">
-            <div class="w-full h-[100px] rounded p-5 flex items-center justify-center" style="background-color: #033600;">
-                <span class="text-white text-2xl">Places of Worship</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!--Project Ammenities-->
-<section class="my-10">
-    <h1 class="text-center text-4xl font-bold">What to expect from Eden IV</h1>
-
-    <div class="grid grid-cols-1 lg:grid-cols-4 mx-5 my-4 gap-5">
-        <div class="col-span-1 lg:col-span-2">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(/img/Tuala/tuala_3.webp)">
-                <span class="text-white text-3xl">Ready Murram Roads</span>
-            </div>
-        </div>
-        <div class="col-span-1 lg:col-span-2 hidden">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(img/eden_phase_4/eden_ridge_IV_marker.jpeg)">
-                <span class="text-white text-3xl">Beacons</span>
-            </div>
-        </div>
-        <div class="col-span-1 lg:col-span-2">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(/img/eden_phase_4/eden_ridge_IV_title.webp)">
-                <span class="text-white text-3xl">Ready Titles</span>
-            </div>
-        </div>
-        <div class="col-span-1 lg:col-span-2 hidden">
-            <div class="w-full h-[300px] rounded p-5 flex items-center justify-center border-1 border-[#033600] bg-local bg-origin-border bg-center bg-cover" style="background-image: url(img/eden_phase_4/eden_ridge_iv_gate.png)">
-                <span class="text-white text-3xl">Gate</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--Payment Options-->
-<section class="my-10 hidden">
-    <h1 class="text-center text-4xl font-bold">Payment Options</h1>
-
-    <div class="relative rounded border border-default m-5">
-        <table class="w-full text-left">
-            <thead class="bg-gray-300 text-black">
-                <tr>
-                    <th scope="col" class="px-6 py-3 font-medium text-center">Cash Price</th>
-                    <th scope="col" class="px-6 py-3 font-medium text-center">Upto 8 Months</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border-default">
-                    <th scope="col" class="px-6 py-4 font-medium text-heading text-center whitespace-nowrap">
-                        1.69M
-                    </th>
-                    <th scope="col" class="px-6 py-4 font-medium text-heading text-center whitespace-nowrap">
-                        1.84M
-                    </th>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+   </div>
 </section>
 
 <!--Customer Inquiry Form-->
 <section class="max-w-lvw py-5 mx-5 my-20">
-   <h1 class="text-black font-bold text-center text-4xl">Ready to see this plot?</h1>
+   <h1 class="text-black text-bold text-center text-4xl">Want to know more?</h1>
 
-    <form id="lead_capture">
+   <form>
         <div class="space-y-12">
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 lg:grid-cols-2">
                 <div class="col-span-.5">
@@ -311,7 +209,7 @@
                     <label for="email" class="block text-sm/6 font-medium text-black">Email Address</label>
                     <div class="mt-2">
                         <div class="flex items-center rounded bg-gray-50/5">
-                            <input type="email" id="email" name="emailAddress" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
+                            <input type="email" id="email" name="email" class="block min-w-0 grow bg-transparent p-2 outline-1 outline-black rounded">
                         </div>
                     </div>
                 </div>
@@ -332,17 +230,14 @@
                 </div>
             </div>
 
-            <input type="text" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
-
             <div class="flex items-center justify-end w-full py-3 border-t-1 border-gray-800/50">
-                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600" type="submit">
+                <button class="rounded-xs py-3 px-5 border-0 text-white text-xl" style="background-color:#033600">
                     Send Inquiry
                 </button>
             </div>
         </div>
    </form>
 </section>
-
 
 <footer class="p-6 mt-10 md:px-16 lg:px-24 xl:px-32 w-full" style="background-color: #FFF;">
     <div class="flex flex-col md:flex-row items-start justify-center gap-30 py-10 border-b border-gray-500/50">
@@ -355,15 +250,15 @@
             </p>
             <div class="flex items-center gap-2 mt-3 flex-col items-start">
                 <a href="https://www.facebook.com/wakalaproperties" class="flex flex-row items-center">
-                  <img src="/lib/remixicon/icons/Logos/facebook-box-fill.svg" class="w-8 h-8" alt="Facebook Logo">
+                  <img src="lib/remixicon/icons/Logos/facebook-box-fill.svg" class="w-8 h-8" alt="Facebook Logo">
                   <span>Wakala Properties</span>
                 </a>
                 <a href="https://x.com/Wakala254" class="flex flex-row items-center">
-                  <img src="/lib/remixicon/icons/Logos/twitter-x-fill.svg" class="w-8 h-8" alt="Twitter Logo">
+                  <img src="lib/remixicon/icons/Logos/twitter-x-fill.svg" class="w-8 h-8" alt="Twitter Logo">
                   <span>Wakala254</span>
                 </a>
                 <a href="https://www.instagram.com/wakala_real_estate/" class="flex flex-row items-center">
-                  <img src="/lib/remixicon/icons/Logos/instagram-fill.svg" class="w-8 h-8" alt="Instagram Logo">
+                  <img src="lib/remixicon/icons/Logos/instagram-fill.svg" class="w-8 h-8" alt="Instagram Logo">
                   <span>@wakala_real_estate</span>
                 </a>           
             </div>
@@ -373,22 +268,21 @@
             <div class="text-start">
                 <h2 class="font-bold mb-5">PROPERTIES</h2>
                 <ul class="text-medium space-y-2 list-none">
-                    <li><a href="/properties/eden_iv_kajiado.html">Eden Ridge Phase 4</a></li>
-                    <li><a href="/properties/tuala_kajiado.html">Tuala</a></li>
-                    <li><a href="/properties/kitengela_kajiado.html">Kitengela Manor</a></li>
-                    <li><a href="/properties/birika_kajiado.html">Birika Gardens</a></li>
+                    <li><a href="#">Eden Ridge Phase 4</a></li>
+                    <li><a href="#">Eden Ridge Phase II</a></li>
+                    <li><a href="#">Birika Gardens</a></li>
                 </ul>
             </div>
             <div class="text-start">
                 <h2 class="font-bold mb-5">WAKALA</h2>
                 <ul class="text-medium space-y-2 list-none">
-                    <li><a href="/property-grids.html">Properties</a></li>
-                    <li><a href="/wakala_identity.html">About Us</a></li>
-                    <li><a href="/404.html">Contact</a></li>
-                    <li><a href="/process.html">Land Buying Process</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Land Buying Process</a></li>
                 </ul>
             </div>
-            <div class="text-start hidden">
+            <div class="text-start">
                 <h2 class="font-bold mb-5">LEGAL</h2>
                 <ul class="text-medium space-y-2 list-none">
                     <li><a href="#">Privacy Policy</a></li>
@@ -410,89 +304,19 @@
             loop: true,
             mouseDrag: true,
             autoplay: true,
-            autoHeight: false,
-        });
-    });
-
-    // const date = document.getElementById("siteVisitDate");
-    // date.min = new Date().toISOString().split("T")[0];
-
-    
-    const webToLeadFormElement = document.getElementById("lead_capture");
-    let isSubmitting = false;
-
-    webToLeadFormElement.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        if (isSubmitting) return;
-
-        const formData = new FormData(webToLeadFormElement);
-        const data = Object.fromEntries(formData.entries());
-
-        const emptyFields = Object.entries(data).filter(([_, v]) => !v.trim());
-        if (emptyFields.length > 0 && !data.website == "") {
-            showError("Please fill in all fields before submitting.");
-            return;
-        }
-
-        isSubmitting = true;
-        setButtonState("loading");
-        submitLead(data);
-    });
-
-    const submitLead = async (data) => {
-        const url = "https://crm.wakala.africa/espocrm/api/v1/LeadCapture/d9869b70aed851f1ff231fa3d70480ea";
-        try {
-            const response = await fetch(url, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "X-Requested-With": "XMLHttpRequest"
+            responsive: {
+                0:{
+                    items: 1
                 },
-                body: JSON.stringify(data)
-            });
-
-            if (response.ok) {
-                setButtonState("success");
-                webToLeadFormElement.reset();
-            } else {
-                showError("Something went wrong. Please try again.");
-                setButtonState("idle");
+                762:{
+                    items: 2
+                },
+                992:{
+                    items: 3
+                }
             }
-        } catch (error) {
-            console.error("Capture failed:", error);
-            showError("Network error. Please check your connection.");
-            setButtonState("idle");
-        } finally {
-            isSubmitting = false; // 🔓 always unlock
-        }
-    };
-
-
-    function setButtonState(state) {
-        const btn = webToLeadFormElement.querySelector("[type='submit']");
-        const states = {
-            idle:    { text: "Send Inquiry", disabled: false },
-            loading: { text: "Sending...",   disabled: true  },
-            success: { text: "Sent ✓",       disabled: true  },
-        };
-        const s = states[state];
-        btn.textContent = s.text;
-        btn.disabled = s.disabled;
-        btn.style.opacity = s.disabled ? "0.6" : "1";
-    }
-
-    function showError(msg) {
-        let el = document.getElementById("form-error");
-        if (!el) {
-            el = document.createElement("p");
-            el.id = "form-error";
-            el.style.cssText = "color:red; margin-top:8px; font-size:14px;";
-            webToLeadFormElement.appendChild(el);
-        }
-        el.textContent = msg;
-        setTimeout(() => el.textContent = "", 4000);
-    }
+        });
+    })
 </script>
 </body>
 </html>
