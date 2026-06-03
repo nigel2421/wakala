@@ -134,7 +134,7 @@
     <div class="relative isolate px-6 pt-10 lg:px-10">
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-52">
             <div class="text-center">
-                <h1 class="text-5xl font-bold tracking-tight text-balance sm:text-7xl" style="color: #FFF;">Introducing Eden Ridge Phase 4</h1>
+                <h1 class="text-5xl font-bold tracking-tight text-balance sm:text-7xl tracking-tighter" style="color: #FFF;">Introducing Eden Ridge Phase 4</h1>
                 <p class="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">Experience the serene and tranquil nature Kiserian has to offer.</p>
                 <p class="font-medium tetx-pretty text-white">From as Low as 1.69M Cash</p>
                 <div class="my-10 flex items-center justify-center gap-x-2 py-2 rounded-lg active:outline outline-green-800" onclick="window.location.href='/properties/eden_iv_kajiado.html'">
@@ -142,6 +142,18 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!--Trade-In section-->
+<section class="my-20 max-w-lvw py-5 overflow-hidden px-3 lg:px-10">
+    <div class="property-tradein-section w-full min-h-[500px] rounded flex items-center justify-center" style="background: url(/img/eden_phase_4/eden_IV_drone.webp); background-position: bottom; background-repeat: no-repeat; background-size: fill;">
+        <span class="flex items-center justify-center flex-col p-20 rounded" style="backdrop-filter: brightness(0.7);">
+            <p class="text-gray-50 text-sm text-center">Introducing</p>
+            <h1 class="text-center text-5xl font-bold tracking-tighter mb-5" style="color: #fff;">Property Trade-In</h1>
+            <p class="text-white text-sm text-center mb-10">Exchange your property for a more primer, more serene and more lucrative land</p>
+            <button class="bg-white border-none py-5 px-4 rounded cta-button" onclick="window.location.href='/trade-in.html'">Click here for more</button>
+        </span>
     </div>
 </section>
 
@@ -155,7 +167,7 @@
             <p class="text-[1.2rem] leading-[1.8] text-black">Wakala Real Estate is a trusted real estate developer with over 15 years of experience in delivering high-quality residential clusters. We strive to provide affordable, legal, and sustainable housing to families.</p>
         </div>
         <div class="w-full my-10 lg:my-1">
-            <h1 class="text-center text-5xl text-black mb-10 font-bold">
+            <h1 class="text-center text-5xl text-black mb-10 font-bold tracking-tighter">
                 Our Promise to You
             </h1>
             <div class="grid grid-cols-2 lg:grid-col-4 gap-2 lg:mx-40">
@@ -190,7 +202,7 @@
 
 <!--Properties Sections-->
 <section class="my-20 max-w-lvw py-5 px-3 lg:px-10">
-   <h1 class="text-black text-center text-5xl mb-10 font-bold">Premium Plots to select from</h1>
+   <h1 class="text-black text-center text-5xl mb-10 font-bold tracking-tighter">Premium Plots to select from</h1>
 
    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-3 my-6">
         <div class="relative property-container col-span-1 w-full min-h-100 border-1 border-gray-100 rounded-md bg-top bg-no-repeat bg-cover flex justify-center" style="background-image: url('/img/eden_phase_4/eden_IV_drone.webp');">
@@ -288,7 +300,7 @@
 
 <!--Testimonials-->
 <section class="my-20 max-w-lvw py-5 overflow-hidden px-3 lg:px-10">
-   <h1 class="text-black text-center text-5xl mb-10 font-bold">Testimonials</h1>
+   <h1 class="text-black text-center text-5xl mb-10 font-bold tracking-tighter">Testimonials</h1>
    <h2 class="text-black font-extralight text-center text-xl">Hear from our satisfied clients</h2>
 
     <div class="testimonial-video-container mx-3 mt-10">
@@ -370,7 +382,7 @@
 
 <!--Blogs Section-->
 <section class="my-20 px-3 lg:px-10">
-   <h1 class="text-black text-center text-5xl mb-10 font-bold">Blogs</h1>
+   <h1 class="text-black text-center text-5xl mb-10 font-bold tracking-tighter">Blogs</h1>
 
    <div class="grid grid-cols-1 lg:grid-cols-3 mx-5 gap-1">
         <div class="col-span-1 w-full min-h-[500px] p-3 rounded hover:bg-gray-200/50 focus:bg-gray-200/50" onclick="window.location.href='/blogs/blog10.html'">
@@ -604,7 +616,7 @@
             showError("Network error. Please check your connection.");
             setButtonState("idle");
         } finally {
-            isSubmitting = false; // 🔓 always unlock
+            isSubmitting = false;
         }
     };
 

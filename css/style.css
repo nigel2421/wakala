@@ -2508,3 +2508,20 @@ footer .credits {
     font-size: 1.3rem;
   }
 }
+
+.cta-button{
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.cta-button:hover{
+  transform: translateY(-5px);
+  background-color: #033500;
+  color: #FFF
+}
+
+.cta-button:active{
+  transform: translateY(-2px);
+  background-color: #FFF;
+  color: #000;
+}
